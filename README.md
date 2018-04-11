@@ -1,2 +1,2 @@
 # synapsedw-infra
-Synapse Development Infrastructure
+Synapse Datawarehouse Infrastructure
