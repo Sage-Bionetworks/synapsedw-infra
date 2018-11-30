@@ -104,6 +104,7 @@ Resources:
       LoginProfile:
         Password: !Ref InitNewUserPassword
         PasswordResetRequired: true
+
   AWSIAMDeveloperUsersGroup:
     Type: 'AWS::IAM::Group'
     Properties:
@@ -112,6 +113,33 @@ Resources:
         - arn:aws:iam::aws:policy/IAMReadOnlyAccess
         - !Ref AWSIAMDynamoDenyDeletePolicy
         - !Ref AWSIAMRdsDenyDeletePolicy
+        - !Ref AWSIAMDevelopersDeployRightsPolicy
+
+  AWSIAMDevelopersDeployRightsPolicy:
+    Type: "AWS::IAM::ManagedPolicy"
+    Properties:
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement:
+          - 
+            Effect: "Allow"
+            Action:
+              - "iam:CreateRole"
+              - "iam:DeleteRole"
+              - "iam:UpdateRole"
+              - "iam:GetRole"
+              - "iam:PassRole"
+              - "iam:CreateRolePolicy"
+              - "iam:DeleteRolePolicy"
+              - "iam:PutRolePolicy"
+              - "iam:CreateInstanceProfile"
+              - "iam:DeleteInstanceProfile"
+              - "iam:GetInstanceProfile"
+              - "iam:RemoveRoleFromInstanceProfile"
+              - "iam:AddRoleToInstanceProfile"
+              - "iam:AttachRolePolicy"
+            Resource: "*"
+
   AWSIAMAdminRole:
     Type: "AWS::IAM::Role"
     Properties:
