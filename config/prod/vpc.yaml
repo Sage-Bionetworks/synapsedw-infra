@@ -1,4 +1,4 @@
-template_path: remote-templates/vpc.yaml
+template_path: remote/vpc.yaml
 stack_name: vpc
 parameters:
   VpcSubnetPrefix: "10.12"
