@@ -3,7 +3,7 @@ stack_name: essentials
 dependencies:
   - prod/bootstrap.yaml
 parameters:
-  OperatorEmail: dev@sagebase.org
+  OperatorEmail: synapse.dw@sagebase.org
   VpcPeeringRequesterAwsAccountId: !ssm /infra/AdmincentralAwsAccountId
 hooks:
   before_update:
