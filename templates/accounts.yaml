@@ -152,6 +152,7 @@ Resources:
               AWS:
                 - !GetAtt AWSIAMXavierSchildwachterUser.Arn
                 - !GetAtt AWSIAMKhaiDoUser.Arn
+                - !GetAtt AWSIAMKimyenLadiaUser.Arn
             Action:
               - "sts:AssumeRole"
       Path: "/"
