@@ -21,4 +21,3 @@ jobs:
       script: cfn-lint ./templates/**/*
     - stage: deploy
       script: sceptre launch prod --yes
-

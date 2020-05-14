@@ -107,10 +107,10 @@ Resources:
   AWSIAMDevelopersDeployRightsPolicy:
     Type: "AWS::IAM::ManagedPolicy"
     Properties:
-      PolicyDocument: 
+      PolicyDocument:
         Version: "2012-10-17"
         Statement:
-          - 
+          -
             Effect: "Allow"
             Action:
               - "iam:CreateRole"
