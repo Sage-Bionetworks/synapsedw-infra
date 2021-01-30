@@ -1,3 +1,6 @@
+# This repo has been moved to https://github.com/Sage-Bionetworks-IT/organizations-infra/tree/master/sceptre/synapsedw
+
+
 # Overview
 Install, configure and manage the AWS synapsedw account.
 
